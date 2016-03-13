@@ -1,13 +1,19 @@
-package com.orogersilva.meuimc;
+package com.orogersilva.meuimc.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.orogersilva.meuimc.R;
+
+public class MainActivity extends BaseActivity {
+
+    // region LIFECYCLE METHODS
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    // endregion
 }
