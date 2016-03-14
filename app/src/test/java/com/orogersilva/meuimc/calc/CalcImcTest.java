@@ -16,6 +16,28 @@ public class CalcImcTest {
 
     // region TEST METHODS
 
+    @Test(expected = IllegalArgumentException.class)
+    public void calc_whenWeightIsInvalid_throwsIllegalArgumentException() {
+
+        // ARRANGE
+        final double INVALID_WEIGHT = 0;
+        final double VALID_HEIGHT = 1.94;
+
+        // ACT / ASSERT
+        CalcImc.calc(INVALID_WEIGHT, VALID_HEIGHT);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void calc_whenHeightIsInvalid_throwsIllegalArgumentException() {
+
+        // ARRANGE
+        final double VALID_WEIGHT = 91;
+        final double INVALID_HEIGHT = 0;
+
+        // ACT / ASSERT
+        CalcImc.calc(VALID_WEIGHT, INVALID_HEIGHT);
+    }
+
     @Test
     public void calc_whenInputIsValid_calcIsSuccessful() {
 
